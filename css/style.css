@@ -1,3 +1,164 @@
 .hidden {
   display: none;
 }
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  position: relative;
+}
+header {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+section {
+  position: absolute;
+  top: 100px;
+  right: 300px;
+}
+#name,
+#login-form input,
+#login-input,
+#todo-form input,
+#todo-form,
+#clock,
+#weather {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+#weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#weather span:first-child {
+  font-size: 20px;
+}
+#weather span:last-child {
+  font-size: 30px;
+}
+#clock {
+  font-size: 80px;
+  margin: 20px 0px;
+}
+img {
+  min-width: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.7;
+  position: absolute;
+  z-index: 0;
+}
+#name {
+  padding-top: 100px;
+  padding-left: 300px;
+}
+#todo-form,
+#list {
+  padding-top: 20px;
+  padding-left: 300px;
+}
+#greeting {
+  font-weight: 400;
+  margin: 0;
+}
+#login-form {
+  position: absolute;
+  top: 100px;
+  right: 200px;
+}
+#login-form input {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  margin-right: 5px;
+  border: none;
+  font-size: 15px;
+}
+#login-input input {
+  padding-left: 10px;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 900;
+  z-index: 3;
+}
+#todo-form input {
+  padding-left: 10px;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 2px solid black;
+  margin-top: 30px;
+  width: 400px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+input:focus {
+  outline: none;
+}
+#list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#todo-list {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 600px;
+  height: 400px;
+  z-index: 2;
+  list-style-type: circle;
+  border: 1px solid rgba(0, 0, 0, 0.363);
+  position: relative;
+}
+#todo-list li {
+  z-index: 3;
+  margin-bottom: 10px;
+}
+
+li button {
+  position: absolute;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: aliceblue;
+  border: none;
+  margin-right: 10px;
+  font-size: 7px;
+}
+li button:hover {
+  will-change: transform;
+  animation: deletePoint 1s linear infinite;
+}
+
+@keyframes deletePoint {
+  0% {
+    color: tomato;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100% {
+    color: tomato;
+    transform: none;
+  }
+}
+
+#quote {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  font-size: 20px;
+}
